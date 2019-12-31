@@ -14,11 +14,9 @@
  
     <h3>Existing Pets</h3>
     <% @pets.each do |pet| %>
-<<<<<<< HEAD
       <input type="checkbox" name="owner[pet_ids][]" id="<%= pet.id %>" value="<%= pet.id %>" <%='checked' if @owner.pets.include?(pet) %><%= pet.name %>/><br>
 =======
       <input type="checkbox" name="owner[pet_ids][]" id="<%= pet.id %>" value="<%= pet.id %>" <%='checked' if @owner.pets.include?(pet) %>><%= pet.name %></input><br>
->>>>>>> a6896ffe35b4200e388399bfcbc21f4d5d203310
     <% end %>
     <br>
  
