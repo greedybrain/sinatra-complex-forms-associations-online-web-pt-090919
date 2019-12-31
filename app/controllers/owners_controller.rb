@@ -20,7 +20,7 @@ class OwnersController < ApplicationController
   end
   get '/owners/:id/edit' do |id|
     @owner = Owner.find_by_id(id) #=> params[:id]
-    # binding.pry
+    binding.pry
     erb :'/owners/edit'
   end
   
