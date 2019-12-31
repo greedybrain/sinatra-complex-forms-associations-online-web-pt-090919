@@ -19,8 +19,8 @@ class OwnersController < ApplicationController
     erb :'/owners/show'
   end
   get '/owners/:id/edit' do |id|
-    binding.pry
     @owner = Owner.find_by_id(id) #=> params[:id]
+    binding.pry
     erb :'/owners/edit'
   end
   
