@@ -16,6 +16,7 @@
     <% @pets.each do |pet| %>
       <input type="checkbox" name="owner[pet_ids][]" id="<%= pet.id %>" value="<%= pet.id %>" <%= 'checked' if @owner.pets.include?(pet) %><%= pet.name %>/><br>
     <br>
+    <% end %>
  
     <h3>New Pet</h3>
     <label>Pet Name: </label>
