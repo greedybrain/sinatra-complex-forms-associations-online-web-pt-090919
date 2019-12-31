@@ -19,6 +19,7 @@ class OwnersController < ApplicationController
     erb :'/owners/show'
   end
   get '/owners/:id/edit' do |id|
+    binding.pry
     @owner = Owner.find_by_id(id) #=> params[:id]
     erb :'/owners/edit'
   end
@@ -32,7 +33,6 @@ class OwnersController < ApplicationController
     if !params["pet"]["name"].empty?
       @owner.pets << Pet.create(name: params["pet"]["name"])
     end
-    # binding.pry
     redirect "owners/#{@owner.id}"
   end
 end
